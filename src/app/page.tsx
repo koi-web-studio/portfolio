@@ -1,113 +1,304 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    return (
+        <main className="flex min-h-screen flex-col">
+            <section className="bg-[#F75E01] md:min-h-[600px] flex flex-col">
+                <header className="w-full flex py-1 items-center justify-center font-mono text-sm md:flex md:justify-start md:px-20">
+                    <a href="/">
+                        <picture>
+                            <source
+                                media="(min-width: 768px)"
+                                srcSet="/koi/logoblanco.png"
+                                width={100}
+                            />
+                            <source
+                                media="(min-width: 400px)"
+                                srcSet="/koi/logotipo-blanco.png"
+                                width={80}
+                            />
+                            <Image
+                                src="/koi/isotipo-blanco.png"
+                                alt="next logo"
+                                width="60"
+                                height="60"
+                            />
+                        </picture>
+                    </a>
+                </header>
+                <div className="grow flex flex-col items-center py-20 md:py-24 relative overflow-hidden">
+                    <div className="absolute top-4 left-4 sm:top-10 sm:left-10">
+                        <Image
+                            src="/star.svg"
+                            alt="detalle estrella"
+                            width={50}
+                            height={50}
+                        ></Image>
+                    </div>
+                    <div className="px-2">
+                        <div className="relative">
+                            <div className="absolute hidden sm:block sm:-right-5 sm:-top-6 md:-right-10">
+                                <Image
+                                    src="/textdetail.svg"
+                                    alt="detalle en texto"
+                                    width={40}
+                                    height={40}
+                                    className="md:w-12"
+                                ></Image>
+                            </div>
+                            <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center flex flex-col">
+                                <span>Webs que convierten</span>
+                                <span>visitas en clientes</span>
+                            </h1>
+                        </div>
+                        <h2 className="mt-3 text-center text-sm sm:text-lg md:text-xl text-balance">
+                            <i>
+                                Convierte cada visita en una oportunidad de
+                                venta
+                            </i>
+                        </h2>
+                        <div className="mt-6 flex flex-col items-center justify-center gap-2 md:flex-row">
+                            <button className="py-3 rounded w-48 text-sm bg-[#690B30] text-white">
+                                Portfolio
+                            </button>
+                            <button className="bg-gray-200 py-3 rounded w-48 text-sm outline outline-1 flex items-center justify-center gap-2">
+                                <Image
+                                    src="/utils/play.svg"
+                                    alt="play VCL"
+                                    width={20}
+                                    height={20}
+                                ></Image>
+                                <span>Mira nuestra VCL</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div className="absolute hidden md:block bottom-14 -right-16">
+                        <Image
+                            src="/heroshape.svg"
+                            alt="detalle forma"
+                            width={200}
+                            height={200}
+                        ></Image>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <article className="py-10 space-y-6 md:py-16 md:space-y-16">
+                    <div className="flex flex-col items-center px-2 gap-5 md:flex-row md:justify-center md:items-center">
+                        <h2 className="font-semibold text-2xl sm:text-3xl text-wrap max-w-md">
+                            Liderá con estilo en diseño y marketing digital con
+                            Koi Studio
+                        </h2>
+                        <h4 className="max-w-md">
+                            En Koi Studio hacemos que tu negocio brille: diseño
+                            y desarrollo web, manejo de redes sociales,
+                            fotografía de producto, branding, y marketing
+                            digital. Con nuestro toque juvenil, tu marca estará
+                            siempre a la moda y lista para destacar.
+                        </h4>
+                    </div>
+                    <div className="px-2 md:px-16 flex flex-col gap-5 md:flex-row md:items-stretch md:justify-center md:gap-6">
+                        <div className="outline outline-2 rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between">
+                            <Image
+                                src="/utils/phoneicon.svg"
+                                alt="diseño y desarrollo web"
+                                width={50}
+                                height={50}
+                            ></Image>
+                            <div>
+                                <h3 className="font-semibold text-xl">
+                                    Diseño y Desarrollo Web
+                                </h3>
+                                <p>
+                                    Creamos sitios web atractivos y funcionales,
+                                    hechos a medida para tu negocio.
+                                </p>
+                            </div>
+                            <a href="#" className="flex items-center gap-2">
+                                <span>Descubre Mas</span>
+                                <Image
+                                    src="/utils/arrow.svg"
+                                    alt="descubre mas"
+                                    width={20}
+                                    height={20}
+                                ></Image>
+                            </a>
+                        </div>
+                        <div className="outline outline-2 rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between">
+                            <Image
+                                src="/utils/handsicon.svg"
+                                alt="redes sociales"
+                                width={50}
+                                height={50}
+                            ></Image>
+                            <div>
+                                <h3 className="font-semibold text-xl">
+                                    Redes Sociales
+                                </h3>
+                                <p>
+                                    Creamos sitios web atractivos y funcionales,
+                                    hechos a medida para tu negocio.
+                                </p>
+                            </div>
+                            <a href="#" className="flex items-center gap-2">
+                                <span>Descubre Mas</span>
+                                <Image
+                                    src="/utils/arrow.svg"
+                                    alt="descubre mas"
+                                    width={20}
+                                    height={20}
+                                ></Image>
+                            </a>
+                        </div>
+                        <div className="outline outline-2 rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between">
+                            <Image
+                                src="/utils/ideaicon.svg"
+                                alt="diseño digital"
+                                width={50}
+                                height={50}
+                            ></Image>
+                            <div>
+                                <h3 className="font-semibold text-xl">
+                                    Diseño Digital
+                                </h3>
+                                <p>
+                                    Creamos sitios web atractivos y funcionales,
+                                    hechos a medida para tu negocio.
+                                </p>
+                            </div>
+                            <a href="#" className="flex items-center gap-2">
+                                <span>Descubre Mas</span>
+                                <Image
+                                    src="/utils/arrow.svg"
+                                    alt="descubre mas"
+                                    width={20}
+                                    height={20}
+                                ></Image>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article className="py-10 space-y-6 sm:py-16 flex flex-col md:flex-row md:justify-around md:items-center md:px-2 lg:justify-center lg:gap-28">
+                    <div className="flex justify-center">
+                        <Image
+                            src="/article1.svg"
+                            alt="imagen de articulo para convertir clientes con nuestras webs"
+                            width={300}
+                            height={200}
+                        ></Image>
+                    </div>
+                    <div className="flex flex-col justify-center px-2 space-y-5 max-w-md mx-auto md:w-auto md:mx-0">
+                        <h2 className="font-semibold text-3xl">
+                            Convertí visitas en clientes con nuestras webs
+                            diseñadas para destacar
+                        </h2>
+                        <h4>
+                            En Koi Studio, transformamos el tráfico web en
+                            clientes a través de diseños impactantes y
+                            estrategias de conversión efectivas. Creamos sitios
+                            web que no solo destacan, sino que también guían a
+                            los visitantes a tomar acciones decisivas para tu
+                            negocio.
+                        </h4>
+                    </div>
+                </article>
+                <article className="py-10 space-y-6 sm:py-16 flex flex-col md:flex-row-reverse md:justify-around md:items-center md:px-2 lg:justify-center lg:gap-28">
+                    <div className="flex justify-center">
+                        <Image
+                            src="/article2.svg"
+                            alt="imagen de articulo para construir marca"
+                            width={300}
+                            height={200}
+                        ></Image>
+                    </div>
+                    <div className="flex flex-col justify-center px-2 space-y-5 max-w-md mx-auto md:w-auto md:mx-0">
+                        <h2 className="font-semibold text-3xl">
+                            Construí tu marca y atraé a tus clientes ideales
+                        </h2>
+                        <h4>
+                            En Koi Studio, diseñamos sitios web que fortalecen
+                            tu marca y atraen a tus clientes ideales. Con un
+                            diseño atractivo y estrategias de comunicación
+                            efectivas, convertimos tu presencia en línea en una
+                            herramienta poderosa para conectar con tu audiencia
+                            y alcanzar tus objetivos de negocio
+                        </h4>
+                    </div>
+                </article>
+            </section>
+            <section className="bg-[#1A1A1A] text-white">
+                <div className="flex flex-col items-center text-center py-10 gap-16 md:flex-row md:justify-center md:py-20 lg:gap-24">
+                    <div>
+                        <h3 className="text-5xl md:text-6xl font-semibold md:text-start">
+                            2
+                        </h3>
+                        <p className="text-gray-400 md:text-lg lg:text-xl">
+                            Años de experiencia
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-5xl md:text-6xl font-semibold md:text-start">
+                            10K
+                        </h3>
+                        <p className="text-gray-400 md:text-lg lg:text-xl">
+                            Seguidores en redes sociales
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-5xl md:text-6xl font-semibold md:text-start">
+                            67
+                        </h3>
+                        <p className="text-gray-400 md:text-lg lg:text-xl">
+                            Proyectos completados
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <article>
+                    <div>{/* <Image></Image> */}</div>
+                    <div>
+                        <h2>The easiest way to promote social media</h2>
+                        <div>
+                            <div>
+                                <h3>Build A Community</h3>
+                                <p>
+                                    Community building is a field of practices
+                                    directed toward the creation or enhancement
+                                    of community among individuals.
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Video & Live Streaming</h3>
+                                <p>
+                                    Connect your audio and video sources. This
+                                    involves on audio and video sources to your
+                                    main live streaming setup.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h2>Choose a plan that works for you</h2>
+                    <div>
+                        <div>
+                            <h3>$$</h3>
+                        </div>
+                        <div>
+                            <h3>$$</h3>
+                        </div>
+                        <div>
+                            <h3>$$</h3>
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3>FAQ</h3>
+                </article>
+            </section>
+            <footer></footer>
+        </main>
+    );
 }
