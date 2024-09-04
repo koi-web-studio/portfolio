@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Home() {
     return (
@@ -59,10 +62,10 @@ export default function Home() {
                             </i>
                         </h2>
                         <div className="mt-6 flex flex-col items-center justify-center gap-2 md:flex-row">
-                            <button className="py-3 rounded w-48 text-sm bg-[#690B30] text-white">
+                            <button className="py-3 rounded w-48 text-sm bg-[#690B30] text-white transition hover:scale-105">
                                 Portfolio
                             </button>
-                            <button className="bg-gray-200 py-3 rounded w-48 text-sm outline outline-1 flex items-center justify-center gap-2">
+                            <button className="bg-gray-200 py-3 rounded w-48 text-sm outline outline-1 flex items-center justify-center gap-2 transition hover:scale-105">
                                 <Image
                                     src="/utils/play.svg"
                                     alt="play VCL"
@@ -98,85 +101,122 @@ export default function Home() {
                             siempre a la moda y lista para destacar.
                         </h4>
                     </div>
-                    <div className="px-2 md:px-16 flex flex-col gap-5 md:flex-row md:items-stretch md:justify-center md:gap-6">
-                        <div className="outline outline-2 rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between">
-                            <Image
-                                src="/utils/phoneicon.svg"
-                                alt="diseño y desarrollo web"
-                                width={50}
-                                height={50}
-                            ></Image>
-                            <div>
-                                <h3 className="font-semibold text-xl">
-                                    Diseño y Desarrollo Web
-                                </h3>
-                                <p>
-                                    Creamos sitios web atractivos y funcionales,
-                                    hechos a medida para tu negocio.
-                                </p>
-                            </div>
-                            <a href="#" className="flex items-center gap-2">
-                                <span>Descubre Mas</span>
-                                <Image
-                                    src="/utils/arrow.svg"
-                                    alt="descubre mas"
-                                    width={20}
-                                    height={20}
-                                ></Image>
-                            </a>
-                        </div>
-                        <div className="outline outline-2 rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between">
-                            <Image
-                                src="/utils/handsicon.svg"
-                                alt="redes sociales"
-                                width={50}
-                                height={50}
-                            ></Image>
-                            <div>
-                                <h3 className="font-semibold text-xl">
-                                    Redes Sociales
-                                </h3>
-                                <p>
-                                    Creamos sitios web atractivos y funcionales,
-                                    hechos a medida para tu negocio.
-                                </p>
-                            </div>
-                            <a href="#" className="flex items-center gap-2">
-                                <span>Descubre Mas</span>
-                                <Image
-                                    src="/utils/arrow.svg"
-                                    alt="descubre mas"
-                                    width={20}
-                                    height={20}
-                                ></Image>
-                            </a>
-                        </div>
-                        <div className="outline outline-2 rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between">
-                            <Image
-                                src="/utils/ideaicon.svg"
-                                alt="diseño digital"
-                                width={50}
-                                height={50}
-                            ></Image>
-                            <div>
-                                <h3 className="font-semibold text-xl">
-                                    Diseño Digital
-                                </h3>
-                                <p>
-                                    Creamos sitios web atractivos y funcionales,
-                                    hechos a medida para tu negocio.
-                                </p>
-                            </div>
-                            <a href="#" className="flex items-center gap-2">
-                                <span>Descubre Mas</span>
-                                <Image
-                                    src="/utils/arrow.svg"
-                                    alt="descubre mas"
-                                    width={20}
-                                    height={20}
-                                ></Image>
-                            </a>
-                        </div>
+                    <div className="px-2 md:px-4 max-w-4xl mx-auto">
+                        <Swiper
+                            spaceBetween={16}
+                            slidesPerView={1}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1,
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                },
+                            }}
+                            className="flex flex-col gap-5 md:flex-row md:items-stretch md:justify-center md:gap-6"
+                        >
+                            <SwiperSlide className="flex-shrink-0">
+                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-orange-100">
+                                    <Image
+                                        src="/utils/phoneicon.svg"
+                                        alt="diseño y desarrollo web"
+                                        width={50}
+                                        height={50}
+                                    />
+                                    <div>
+                                        <h3 className="font-semibold text-xl">
+                                            Diseño y Desarrollo Web
+                                        </h3>
+                                        <p>
+                                            Creamos sitios web atractivos y
+                                            funcionales, hechos a medida para tu
+                                            negocio.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        className="flex items-center gap-2 transition group-hover:underline"
+                                    >
+                                        <span>Descubre Mas</span>
+                                        <Image
+                                            src="/utils/arrow.svg"
+                                            alt="descubre mas"
+                                            width={20}
+                                            height={20}
+                                            className="ml-1 -translate-x-3 opacity-0 transition-all duration-150 group-hover:translate-x-0 group-hover:opacity-100"
+                                        />
+                                    </a>
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide className="flex-shrink-0">
+                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-blue-100">
+                                    <Image
+                                        src="/utils/handsicon.svg"
+                                        alt="redes sociales"
+                                        width={50}
+                                        height={50}
+                                    />
+                                    <div>
+                                        <h3 className="font-semibold text-xl">
+                                            Redes Sociales
+                                        </h3>
+                                        <p>
+                                            Creamos sitios web atractivos y
+                                            funcionales, hechos a medida para tu
+                                            negocio.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        className="flex items-center gap-2 transition group-hover:underline"
+                                    >
+                                        <span>Descubre Mas</span>
+                                        <Image
+                                            src="/utils/arrow.svg"
+                                            alt="descubre mas"
+                                            width={20}
+                                            height={20}
+                                            className="ml-1 -translate-x-3 opacity-0 transition-all duration-150 group-hover:translate-x-0 group-hover:opacity-100"
+                                        />
+                                    </a>
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide className="flex-shrink-0">
+                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-green-100">
+                                    <Image
+                                        src="/utils/ideaicon.svg"
+                                        alt="diseño digital"
+                                        width={50}
+                                        height={50}
+                                    />
+                                    <div>
+                                        <h3 className="font-semibold text-xl">
+                                            Diseño Digital
+                                        </h3>
+                                        <p>
+                                            Creamos sitios web atractivos y
+                                            funcionales, hechos a medida para tu
+                                            negocio.
+                                        </p>
+                                    </div>
+                                    <a
+                                        href="#"
+                                        className="flex items-center gap-2 transition group-hover:underline"
+                                    >
+                                        <span>Descubre Mas</span>
+                                        <Image
+                                            src="/utils/arrow.svg"
+                                            alt="descubre mas"
+                                            width={20}
+                                            height={20}
+                                            className="ml-1 -translate-x-3 opacity-0 transition-all duration-150 group-hover:translate-x-0 group-hover:opacity-100"
+                                        />
+                                    </a>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
                 </article>
                 <article className="py-10 space-y-6 sm:py-16 flex flex-col md:flex-row md:justify-around md:items-center md:px-2 lg:justify-center lg:gap-28">
