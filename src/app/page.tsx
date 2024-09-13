@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { MainHero } from "@/components/ui/mainhero";
+import Vcl from "@/components/ui/Vcl";
 
 export default function Home() {
     return (
@@ -30,7 +32,7 @@ export default function Home() {
                         </picture>
                     </a>
                 </header>
-                <div className="grow flex flex-col items-center py-20 md:py-24 relative overflow-hidden">
+                <div className="grow flex flex-col items-center relative overflow-hidden">
                     <div className="absolute top-4 left-4 sm:top-10 sm:left-10">
                         <Image
                             src="/star.svg"
@@ -40,41 +42,7 @@ export default function Home() {
                         ></Image>
                     </div>
                     <div className="px-2">
-                        <div className="relative">
-                            <div className="absolute hidden sm:block sm:-right-5 sm:-top-6 md:-right-10">
-                                <Image
-                                    src="/textdetail.svg"
-                                    alt="detalle en texto"
-                                    width={40}
-                                    height={40}
-                                    className="md:w-12"
-                                ></Image>
-                            </div>
-                            <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center flex flex-col">
-                                <span>Webs que convierten</span>
-                                <span>visitas en clientes</span>
-                            </h1>
-                        </div>
-                        <h2 className="mt-3 text-center text-sm sm:text-lg md:text-xl text-balance">
-                            <i>
-                                Convierte cada visita en una oportunidad de
-                                venta
-                            </i>
-                        </h2>
-                        <div className="mt-6 flex flex-col items-center justify-center gap-2 md:flex-row">
-                            <button className="py-3 rounded w-48 text-sm bg-[#690B30] text-white transition hover:scale-105">
-                                Portfolio
-                            </button>
-                            <button className="bg-gray-200 py-3 rounded w-48 text-sm outline outline-1 flex items-center justify-center gap-2 transition hover:scale-105">
-                                <Image
-                                    src="/utils/play.svg"
-                                    alt="play VCL"
-                                    width={20}
-                                    height={20}
-                                ></Image>
-                                <span>Mira nuestra VCL</span>
-                            </button>
-                        </div>
+                        <MainHero></MainHero>
                     </div>
                     <div className="absolute hidden md:block bottom-14 -right-16">
                         <Image
@@ -88,7 +56,7 @@ export default function Home() {
             </section>
             <section>
                 <article className="py-10 space-y-6 md:py-16 md:space-y-16">
-                    <div className="flex flex-col items-center px-2 gap-5 md:flex-row md:justify-center md:items-center">
+                    <div className="flex flex-col items-center px-3 gap-5 md:flex-row md:justify-center md:items-center">
                         <h2 className="font-semibold text-2xl sm:text-3xl text-wrap max-w-md">
                             Liderá con estilo en diseño y marketing digital con
                             Koi Studio
@@ -116,7 +84,7 @@ export default function Home() {
                             className="flex flex-col gap-5 md:flex-row md:items-stretch md:justify-center md:gap-6"
                         >
                             <SwiperSlide className="flex-shrink-0">
-                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-orange-100">
+                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-orange-100 cursor-pointer">
                                     <Image
                                         src="/utils/phoneicon.svg"
                                         alt="diseño y desarrollo web"
@@ -150,7 +118,7 @@ export default function Home() {
                             </SwiperSlide>
 
                             <SwiperSlide className="flex-shrink-0">
-                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-blue-100">
+                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-blue-100 cursor-pointer">
                                     <Image
                                         src="/utils/handsicon.svg"
                                         alt="redes sociales"
@@ -184,7 +152,7 @@ export default function Home() {
                             </SwiperSlide>
 
                             <SwiperSlide className="flex-shrink-0">
-                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-green-100">
+                                <div className="max-w-md mx-auto border-2 border-black rounded-xl basis-72 grow flex flex-col gap-6 py-10 px-8 justify-between md:h-[420px] group transition-colors hover:bg-green-100 cursor-pointer">
                                     <Image
                                         src="/utils/ideaicon.svg"
                                         alt="diseño digital"
@@ -228,7 +196,7 @@ export default function Home() {
                             height={200}
                         ></Image>
                     </div>
-                    <div className="flex flex-col justify-center px-2 space-y-5 max-w-md mx-auto md:w-auto md:mx-0">
+                    <div className="flex flex-col justify-center px-3 space-y-5 max-w-md mx-auto md:w-auto md:mx-0">
                         <h2 className="font-semibold text-3xl">
                             Convertí visitas en clientes con nuestras webs
                             diseñadas para destacar
@@ -252,7 +220,7 @@ export default function Home() {
                             height={200}
                         ></Image>
                     </div>
-                    <div className="flex flex-col justify-center px-2 space-y-5 max-w-md mx-auto md:w-auto md:mx-0">
+                    <div className="flex flex-col justify-center px-3 space-y-5 max-w-md mx-auto md:w-auto md:mx-0">
                         <h2 className="font-semibold text-3xl">
                             Construí tu marca y atraé a tus clientes ideales
                         </h2>
@@ -296,41 +264,163 @@ export default function Home() {
                 </div>
             </section>
             <section>
-                <article>
-                    <div>{/* <Image></Image> */}</div>
-                    <div>
-                        <h2>The easiest way to promote social media</h2>
-                        <div>
-                            <div>
-                                <h3>Build A Community</h3>
-                                <p>
-                                    Community building is a field of practices
-                                    directed toward the creation or enhancement
-                                    of community among individuals.
-                                </p>
-                            </div>
-                            <div>
-                                <h3>Video & Live Streaming</h3>
-                                <p>
-                                    Connect your audio and video sources. This
-                                    involves on audio and video sources to your
-                                    main live streaming setup.
-                                </p>
-                            </div>
+                <article className="py-10 space-y-6 sm:py-16 flex flex-col md:flex-row-reverse md:justify-around md:items-center md:px-2 lg:justify-center lg:gap-28">
+                    <div className="flex flex-col justify-center px-3 space-y-5 max-w-md mx-auto md:w-auto md:mx-0">
+                        <h2 className="font-semibold text-3xl text-center md:text-start">
+                            La mejor forma de convertir visitas en ventas
+                        </h2>
+                        <h4>
+                            La creación de comunidades no se trata solo de
+                            reunir personas, sino de construir un espacio donde
+                            tus clientes se sientan parte de algo más grande
+                        </h4>
+                    </div>
+                    <div className="flex justify-center items-center mb-5">
+                        <div className="size-[200px] relative">
+                            <Vcl />
                         </div>
                     </div>
                 </article>
-                <article>
-                    <h2>Choose a plan that works for you</h2>
-                    <div>
-                        <div>
-                            <h3>$$</h3>
+                <article className="py-10 sm:py-16 px-2">
+                    <h2 className="font-semibold text-3xl text-center text-balance md:text-4xl flex flex-col">
+                        <span>Desarrollo web que se adaptan a</span>
+                        <span>tus necesidades</span>
+                    </h2>
+                    <div className="py-10 flex flex-col md:flex-row md:items-center md:justify-center gap-4 max-w-sm mx-auto md:max-w-fit">
+                        <div className="bg-[#E5EEF5] py-8 px-6 md:px-10 rounded-xl space-y-6 h-full">
+                            <div className="space-y-4">
+                                <h3 className="text-lg">Landing Page</h3>
+                                <h3 className="text-4xl font-semibold">
+                                    <span className="text-xl">$</span>
+                                    <i>200</i>
+                                </h3>
+                                <p className="text-sm">Pago Único</p>
+                            </div>
+                            <ul className="border-t border-gray-400 py-8 space-y-3">
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="1 pagina"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p> 1 Página</p>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="30 Propuestas de diseño"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p>30 Propuestas de diseño</p>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="Hosting y dominio (anual)"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p>Hosting y dominio (anual)</p>
+                                </li>
+                            </ul>
+                            <button className="border-2 border-black py-1 px-8 font-semibold transition-colors hover:bg-black hover:text-white">
+                                Ver Más
+                            </button>
                         </div>
-                        <div>
-                            <h3>$$</h3>
+                        <div className="bg-[#12141D] text-white py-8 px-6 md:px-10 rounded-xl space-y-6">
+                            <div className="space-y-4">
+                                <h3 className="text-lg">Corporativo</h3>
+                                <h3 className="text-4xl font-semibold">
+                                    <span className="text-xl">$</span>
+                                    <i>350</i>
+                                </h3>
+                                <p className="text-sm">Pago Único</p>
+                            </div>
+                            <ul className="border-t border-gray-400 py-8 space-y-3">
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="4 paginas"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p> 4 Páginas</p>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="30 Propuestas de diseño"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p>Diseño a medida</p>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="Hosting y dominio (anual)"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p>Hosting y dominio (anual)</p>
+                                </li>
+                            </ul>
+                            <button className="border-2 border-white py-1 px-8 font-semibold transition-colors hover:bg-white hover:text-black">
+                                Ver Más
+                            </button>
                         </div>
-                        <div>
-                            <h3>$$</h3>
+                        <div className="bg-[#E5EEF5] py-8 px-6 md:px-10 rounded-xl space-y-6 h-full">
+                            <div className="space-y-4">
+                                <h3 className="text-lg">E-commerce</h3>
+                                <h3 className="text-4xl font-semibold">
+                                    <span className="text-xl">$</span>
+                                    <i>400</i>
+                                </h3>
+                                <p className="text-sm">Pago Único</p>
+                            </div>
+                            <ul className="border-t border-gray-400 py-4 space-y-3">
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="Meta Pixel"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p> Meta Pixel</p>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="Diseño a medida"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p>Diseño a medida</p>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="Hosting y dominio (anual)"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p>Dominio (anual)</p>
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Image
+                                        src="/utils/check.svg"
+                                        alt="Hosting y dominio (anual)"
+                                        width={20}
+                                        height={20}
+                                    />
+                                    <p>Mantenimiento (primer mes)</p>
+                                </li>
+                            </ul>
+                            <button className="border-2 border-black py-1 px-8 font-semibold transition-colors hover:bg-black hover:text-white">
+                                Ver Más
+                            </button>
                         </div>
                     </div>
                 </article>
