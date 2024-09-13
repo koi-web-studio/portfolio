@@ -85,22 +85,6 @@ const config = {
                             "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
                     },
                 },
-                "accordion-down": {
-                    from: {
-                        height: "0",
-                    },
-                    to: {
-                        height: "var(--radix-accordion-content-height)",
-                    },
-                },
-                "accordion-up": {
-                    from: {
-                        height: "var(--radix-accordion-content-height)",
-                    },
-                    to: {
-                        height: "0",
-                    },
-                },
                 marquee: {
                     from: { transform: "translateX(0)" },
                     to: { transform: "translateX(calc(-100% - var(--gap)))" },
@@ -114,8 +98,6 @@ const config = {
                 "accordion-down": "accordion-down 0.2s ease-out",
                 "accordion-up": "accordion-up 0.2s ease-out",
                 orbit: "orbit calc(var(--duration)*1s) linear infinite",
-                "accordion-down": "accordion-down 0.2s ease-out",
-                "accordion-up": "accordion-up 0.2s ease-out",
                 marquee: "marquee var(--duration) linear infinite",
                 "marquee-vertical":
                     "marquee-vertical var(--duration) linear infinite",
