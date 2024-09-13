@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { MainHero } from "@/components/ui/mainhero";
 import Vcl from "@/components/ui/Vcl";
+import FAQ from "@/components/FAQ";
+import MagicBtn from "@/components/ui/MagicBtn";
+import Testimonios from "@/components/ui/Testimonios";
 
 export default function Home() {
     return (
@@ -325,7 +328,10 @@ export default function Home() {
                                     <p>Hosting y dominio (anual)</p>
                                 </li>
                             </ul>
-                            <button className="border-2 border-black py-1 px-8 font-semibold transition-colors hover:bg-black hover:text-white">
+                            <button
+                                className="relative py-1 px-8 isolation-auto z-10 border-2 border-black
+        before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-right-full before:hover:right-0 before:rounded-full  before:bg-black before:-z-10  before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-200 hover:text-white"
+                            >
                                 Ver Más
                             </button>
                         </div>
@@ -367,7 +373,10 @@ export default function Home() {
                                     <p>Hosting y dominio (anual)</p>
                                 </li>
                             </ul>
-                            <button className="border-2 border-white py-1 px-8 font-semibold transition-colors hover:bg-white hover:text-black">
+                            <button
+                                className="relative py-1 px-8 isolation-auto z-10 border-2 border-white
+        before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-right-full before:hover:right-0 before:rounded-full  before:bg-white before:-z-10  before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-200 hover:text-black"
+                            >
                                 Ver Más
                             </button>
                         </div>
@@ -418,15 +427,61 @@ export default function Home() {
                                     <p>Mantenimiento (primer mes)</p>
                                 </li>
                             </ul>
-                            <button className="border-2 border-black py-1 px-8 font-semibold transition-colors hover:bg-black hover:text-white">
+                            <button
+                                className="relative py-1 px-8 isolation-auto z-10 border-2 border-black
+        before:absolute before:w-full before:transition-all before:duration-300 before:hover:w-full before:-right-full before:hover:right-0 before:rounded-full  before:bg-black before:-z-10  before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-200 hover:text-white"
+                            >
                                 Ver Más
                             </button>
                         </div>
                     </div>
                 </article>
-                <article>
-                    <h3>FAQ</h3>
+                <article className="py-10 sm:py-16 px-4">
+                    <div className="flex flex-col gap-2 space-y-4">
+                        <h3 className="font-semibold text-3xl text-center">
+                            Preguntas Frecuentes
+                        </h3>
+                        <div className="px-2 max-w-4xl md:mx-auto">
+                            <FAQ />
+                        </div>
+                    </div>
                 </article>
+            </section>
+            <section className="bg-[#C495FF]">
+                <div className="py-10 md:py-16 px-4 space-y-10">
+                    <h3 className="text-3xl font-semibold flex flex-col items-center">
+                        <span>Lo que dicen de</span>
+                        <span>nosotros</span>
+                    </h3>
+                    <div>
+                        <Testimonios></Testimonios>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="py-10 md:py-16 px-4">
+                    <div className="bg-[#41FB69] rounded-3xl max-w-[950px] md:mx-auto py-14 flex flex-col items-center gap-5 relative">
+                        <Image
+                            src="/utils/cta-shape.svg"
+                            alt="obtener asesoria gratuita"
+                            width={250}
+                            height={250}
+                            className="absolute top-0 left-0"
+                        />
+                        <h2 className="font-semibold text-3xl md:text-4xl flex flex-col items-center z-20">
+                            <span>Obtener una asesoría</span>
+                            <span>gratuita</span>
+                        </h2>
+                        <MagicBtn></MagicBtn>
+                        <Image
+                            src="/utils/cta-vector.svg"
+                            alt="obtener asesoria gratuita"
+                            width={150}
+                            height={150}
+                            className="hidden sm:block absolute right-12 bottom-12"
+                        />
+                    </div>
+                </div>
             </section>
             <footer></footer>
         </main>
